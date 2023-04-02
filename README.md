@@ -1,1 +1,1 @@
-# stepik_page_object
+# stepikPageObject
