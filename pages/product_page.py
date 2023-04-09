@@ -14,10 +14,10 @@ class ProductPage(BasePage):
     def message_add_product_in_basket(self):
         name_product = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         name_product_in_basket = self.browser.find_element(*ProductPageLocators.MESSAGE_ADD_BASKET).text
-        assert name_product == name_product_in_basket, f"The product name does not match. Expected {name_product}, got {name_product_in_basket}"
+        assert name_product == name_product_in_basket, f"The product name does not match. Expected '{name_product}', got '{name_product_in_basket}'"
 
     def price_basket(self):
         price_product = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
         price_basket = self.browser.find_element(*ProductPageLocators.PRICE_BASKET).text
-        assert price_product == price_basket, f"The cost of the product in the basket does not match. Expected {price_product}, got {price_basket}"
+        assert price_product == price_basket, f"The cost of the product in the basket does not match. Expected '{price_product}', got '{price_basket}'"
 
